@@ -85,8 +85,8 @@ public class login extends AppCompatActivity {
     protected void LoginValidatation(){
         String username = usernameEntered.getText().toString();
         String password = passwordEntered.getText().toString();
-
         String hashedPassword = encrypted.sha256(password);
+
 
     }
 }
