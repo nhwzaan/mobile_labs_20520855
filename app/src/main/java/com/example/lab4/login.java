@@ -18,11 +18,13 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.google.firebase.firestore.FirebaseFirestore;
+import android.widget.Toast;
 
 public class login extends AppCompatActivity {
 
-    //EditText usernameEntered = (EditText) findViewById(R.id.UsernameInput);
-    //Button loginButton = (Button) findViewById(R.id.btnLogin);
+    EditText usernameEntered = (EditText) findViewById(R.id.UsernameInput);
+    EditText passwordEntered = (EditText) findViewById(R.id.PasswordInput);
+    Button loginButton = (Button) findViewById(R.id.btnLogin);
 
     private String getColoredSpanned(String text, String color)
     {
@@ -40,6 +42,10 @@ public class login extends AppCompatActivity {
         String second = getColoredSpanned(" game", "#000000");
         title.setText(Html.fromHtml(first + " " + second));
 
+        FirebaseFirestore db;
+        CollectionReference usersRef;
+        db = FirebaseFirestore.getInstance();
+        usersRef = db.collection("User");
         CheckBox show = (CheckBox) findViewById(R.id.checkPasswordHideorShow);
         EditText passwordEntered = findViewById(R.id.PasswordInput);
         //boolean check = show.isChecked();
@@ -75,15 +81,13 @@ public class login extends AppCompatActivity {
             }
         });
 
-        FirebaseFirestore db;
-        CollectionReference usersRef;
-        db = FirebaseFirestore.getInstance();
-        usersRef = db.collection("User");
-        EditText usernameEntered = (EditText) findViewById(R.id.UsernameInput);
-        //EditText passwordEntered = (EditText) findViewById(R.id.PasswordInput);
+}
+    protected void LoginValidatation(){
+        String username = usernameEntered.getText().toString();
+        String password = passwordEntered.getText().toString();
 
+        String hashedPassword = encrypted.sha256(password);
 
+    }
+}
 
-
-
-}}
