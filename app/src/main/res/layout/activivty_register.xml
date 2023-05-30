@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="welcome to be "
+        android:textColor="@color/deep_blule"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a part of us"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toEndOf="@+id/name1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Fullname_REG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Fullname:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name1"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/fullnameInput_REG"
+        android:layout_width="352dp"
+        android:layout_height="51dp"
+        android:autofillHints="Enter your username"
+        android:hint="Please enter your fullname"
+        android:minWidth="48dp"
+        android:textColorHint="@color/medium_grey"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/Fullname_REG"
+        app:layout_constraintTop_toBottomOf="@+id/Fullname_REG"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Phone_REG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone number:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fullnameInput_REG"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/fullnameInput_REG"
+        app:layout_constraintTop_toBottomOf="@+id/fullnameInput_REG"
+        app:layout_constraintVertical_bias="0.038"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/PhoneInput_REG"
+        android:layout_width="355dp"
+        android:layout_height="54dp"
+        android:hint="Please enter your phone number"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:textColorHint="@color/medium_grey"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/fullnameInput_REG"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Phone_REG"
+        app:layout_constraintTop_toBottomOf="@+id/Phone_REG"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/username_REG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneInput_REG"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/UsernameInput_REG"
+        android:layout_width="345dp"
+        android:layout_height="51dp"
+        android:autofillHints="Enter your username"
+        android:hint="Please enter your username"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:textColorHint="@color/medium_grey"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/username_REG"
+        app:layout_constraintTop_toBottomOf="@+id/username_REG"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Password_REG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/username_REG"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/UsernameInput_REG"
+        app:layout_constraintTop_toBottomOf="@+id/UsernameInput_REG"
+        app:layout_constraintVertical_bias="0.067"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/PasswordInput_REG"
+        android:layout_width="343dp"
+        android:layout_height="53dp"
+        android:hint="Please enter your password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/medium_grey"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/UsernameInput_REG"
+        app:layout_constraintStart_toStartOf="@+id/Password_REG"
+        app:layout_constraintTop_toBottomOf="@+id/Password_REG"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="78dp"
+        android:backgroundTint="@color/light_blue"
+        android:text="Join us (*￣▽￣*)ブ"
+        android:textAllCaps="true"
+        android:textColor="@color/deep_blule"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordInput_REG"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/btnChangeToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="back to login"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

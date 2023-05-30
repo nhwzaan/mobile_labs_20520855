@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    app:flow_verticalAlign="center"
+    tools:context=".login">
+
+    <TextView
+        android:id="@+id/ApplicationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Username and input of username -->
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ApplicationName"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/UsernameInput"
+        android:layout_width="345dp"
+        android:layout_height="51dp"
+        android:autofillHints="Enter your username"
+        android:hint="Please enter your username"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:textColorHint="@color/medium_grey"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Password and input of password -->
+    <TextView
+        android:id="@+id/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/username"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/UsernameInput"
+        app:layout_constraintTop_toBottomOf="@+id/UsernameInput"
+        app:layout_constraintVertical_bias="0.072"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/PasswordInput"
+        android:layout_width="343dp"
+        android:layout_height="53dp"
+        android:hint="Please enter your password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/medium_grey"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/UsernameInput"
+        app:layout_constraintStart_toStartOf="@+id/Password"
+        app:layout_constraintTop_toBottomOf="@+id/Password"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/checkPasswordHideorShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show password"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/PasswordInput"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordInput"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/light_blue"
+        android:text="Login (*￣▽￣*)ブ"
+        android:textAllCaps="true"
+        android:textColor="@color/deep_blule"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnChangeToRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkPasswordHideorShow"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/btnChangeToRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="or click here to sign up"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
