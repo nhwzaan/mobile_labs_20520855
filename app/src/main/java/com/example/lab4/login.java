@@ -63,6 +63,17 @@ public class login extends AppCompatActivity {
                 finish();
             }
         });
+        Button btnLogin = (Button) findViewById(R.id.btnLogin);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(login.this,
+                        MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
     }
 
