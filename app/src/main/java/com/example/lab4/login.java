@@ -82,15 +82,8 @@ public class login extends AppCompatActivity {
         EditText usernameEntered = (EditText) findViewById(R.id.UsernameInput);
         //EditText passwordEntered = (EditText) findViewById(R.id.PasswordInput);
 
-        Button login = (Button) findViewById(R.id.btnLogin);
-
-        login.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v) {
-            }
-        });
-        }
 
 
-}
+
+
+}}
