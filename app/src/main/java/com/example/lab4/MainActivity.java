@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 //Toast.makeText(Home.this, "Log Out Successfully", Toast.LENGTH_SHORT).show();
             }
         });
+        return false;
     }
 
 }

@@ -4,7 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatCheckBox;
-
+import com.google.firebase.firestore.CollectionReference;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -17,6 +17,7 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class login extends AppCompatActivity {
 
@@ -74,7 +75,22 @@ public class login extends AppCompatActivity {
             }
         });
 
+        FirebaseFirestore db;
+        CollectionReference usersRef;
+        db = FirebaseFirestore.getInstance();
+        usersRef = db.collection("User");
+        EditText usernameEntered = (EditText) findViewById(R.id.UsernameInput);
+        //EditText passwordEntered = (EditText) findViewById(R.id.PasswordInput);
 
-    }
+        Button login = (Button) findViewById(R.id.btnLogin);
+
+        login.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+        }
+
 
 }

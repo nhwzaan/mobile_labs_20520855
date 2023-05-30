@@ -48,6 +48,7 @@ public class register extends AppCompatActivity {
         signupUsername = (EditText) findViewById(R.id.UsernameInput_REG);
         signupPassword = (EditText) findViewById(R.id.PasswordInput_REG);
         signupButton = (Button) findViewById(R.id.btnRegister);
+        return false;
     }
 
 }
