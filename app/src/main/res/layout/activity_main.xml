@@ -4,18 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="uit.edu.vn.lab05_1.MainActivity">
+    tools:context=".MainActivity">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="6">
+
         <ImageView
             android:id="@+id/iv_uit_logo"
-            android:layout_width="@dimen/image_base"
-            android:layout_height="@dimen/image_base"
+            android:layout_width="344dp"
+            android:layout_height="208dp"
             android:layout_gravity="center"
             android:scaleType="fitCenter"
-            android:src="@drawable/uit_logo"/>
+            android:src="@drawable/uit_logo" />
     </FrameLayout>
     <LinearLayout
         android:layout_marginTop="@dimen/margin_basex2"
