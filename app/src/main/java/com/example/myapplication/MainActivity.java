@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ivUitLogo.setOnClickListener(new View.OnClickListener() {
+/*        ivUitLogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent iNewActivity = new Intent(MainActivity.this, Exercise_3.class);
@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
 
                 overridePendingTransition(R.anim.anim_enter, R.anim.anim_leave);
             }
-        });
+        });*/
 
 
 
