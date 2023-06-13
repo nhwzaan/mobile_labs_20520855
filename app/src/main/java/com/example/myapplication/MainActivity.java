@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -65,6 +67,61 @@ public class MainActivity extends AppCompatActivity {
         };
     }
 
+    private void handleClickAnimationXml(Button btn, int animId)
+    {
+        final Animation animation = AnimationUtils.loadAnimation(MainActivity.this,
+                animId);
+
+        animation.setAnimationListener(animationListener);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ivUitLogo.startAnimation(animation);
+            }
+        });
+    }
+
+
+    private void handleClickAnimationCode(Button btn, final Animation animation) {
+
+        // Handle onclickListenner to start animation
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivUitLogo.startAnimation(animation);
+            }
+        });
+
+    }
+
+    private Animation initFadeInAnimation()
+    {
+        AlphaAnimation animation = new AlphaAnimation(0f, 1f);
+        animation.setDuration(1000);
+        animation.setFillAfter(true);
+        animation.setAnimationListener(animationListener);
+        return animation;
+    }
+
+    private Animation initFadeOutAnimation()
+    {
+        AlphaAnimation animation = new AlphaAnimation(1f, 0f);
+        animation.setDuration(1000);
+        animation.setFillAfter(true);
+        animation.setAnimationListener(animationListener);
+        return animation;
+    }
+
+    private Animation initBlinkAnimation()
+    {
+        AlphaAnimation animation = new AlphaAnimation(0f, 1f);
+        animation.setDuration(300);
+        animation.setRepeatMode(Animation.REVERSE);
+        animation.setRepeatCount(3);
+        animation.setAnimationListener(animationListener);
+        return animation;
+    }
 
 
 
@@ -76,15 +133,21 @@ public class MainActivity extends AppCompatActivity {
         findViewsByIds();
         initVariables();
 
-        final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_fade_in);
-        animation.setAnimationListener(animationListener);
+        //HandleClickAnimationXML
+        handleClickAnimationXml(btnFadeInXml, R.anim.anim_fade_in);
+        handleClickAnimationXml(btnFadeOutXml, R.anim.anim_fade_out);
+        handleClickAnimationXml(btnBlinkXml, R.anim.anim_blink);
+        handleClickAnimationXml(btnZoomInXml, R.anim.anim_zoom_in);
+        handleClickAnimationXml(btnZoomOutXml, R.anim.anim_zoom_out);
+        handleClickAnimationXml(btnRotateXml, R.anim.anim_rotate);
+        handleClickAnimationXml(btnMoveXml, R.anim.anim_move);
+        handleClickAnimationXml(btnSlideUpXml, R.anim.anim_slide_up);
+        handleClickAnimationXml(btnBounceXml, R.anim.anim_bounce);
+        handleClickAnimationXml(btnCombineXml, R.anim.anim_combine);
 
-        btnFadeInXml.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ivUitLogo.startAnimation(animation);
-            }
-        });
+
+
+
     }
 
 
