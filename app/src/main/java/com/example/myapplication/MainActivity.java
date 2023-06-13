@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -82,19 +84,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-    private void handleClickAnimationCode(Button btn, final Animation animation) {
-
-        // Handle onclickListenner to start animation
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ivUitLogo.startAnimation(animation);
-            }
-        });
-
-    }
-
     private Animation initFadeInAnimation()
     {
         AlphaAnimation animation = new AlphaAnimation(0f, 1f);
@@ -125,10 +114,28 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    private void handleClickAnimationCode(Button btn, final Animation animation) {
+
+
+        // Handle onclickListenner to start animation
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivUitLogo.startAnimation(animation);
+            }
+        });
+
+    }
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
+
 
         findViewsByIds();
         initVariables();
@@ -144,6 +151,11 @@ public class MainActivity extends AppCompatActivity {
         handleClickAnimationXml(btnSlideUpXml, R.anim.anim_slide_up);
         handleClickAnimationXml(btnBounceXml, R.anim.anim_bounce);
         handleClickAnimationXml(btnCombineXml, R.anim.anim_combine);
+
+        //HandleClickAnimationCode
+        handleClickAnimationCode(btnFadeInCode, initFadeInAnimation());
+        handleClickAnimationCode(btnFadeOutCode, initFadeOutAnimation());
+        handleClickAnimationCode(btnBlinkCode, initBlinkAnimation());
 
 
 
