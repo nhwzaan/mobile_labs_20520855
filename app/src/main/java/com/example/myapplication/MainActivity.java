@@ -114,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     private void handleClickAnimationCode(Button btn, final Animation animation) {
 
 
@@ -127,8 +126,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
 
 
     @Override
@@ -177,7 +174,6 @@ public class MainActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.anim_enter, R.anim.anim_leave);
             }
         });*/
-
 
 }
 }

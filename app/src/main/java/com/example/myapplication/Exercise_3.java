@@ -28,7 +28,5 @@ public class Exercise_3 extends AppCompatActivity {
             }
         });
 
-    }
-
-    ;
+    };
 }
