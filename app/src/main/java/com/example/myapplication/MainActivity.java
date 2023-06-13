@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -157,10 +158,28 @@ public class MainActivity extends AppCompatActivity {
         handleClickAnimationCode(btnFadeOutCode, initFadeOutAnimation());
         handleClickAnimationCode(btnBlinkCode, initBlinkAnimation());
 
+        ivUitLogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iNewActivity = new Intent(MainActivity.this, Exercise_3.class);
+                startActivity(iNewActivity);
+
+                overridePendingTransition(R.anim.anim_fade_in, R.anim.anim_fade_out);
+            }
+        });
+
+        ivUitLogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iNewActivity = new Intent(MainActivity.this, Exercise_3.class);
+                startActivity(iNewActivity);
+
+                overridePendingTransition(R.anim.anim_enter, R.anim.anim_leave);
+            }
+        });
 
 
 
-    }
 
-
+}
 }
